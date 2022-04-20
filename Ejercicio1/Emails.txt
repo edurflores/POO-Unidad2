@@ -1,0 +1,11 @@
+idcuenta,dominio,tipodominio,contrasenha
+joseperez25,gmail,com,josecito4
+rogeliofrigerio4,yahoo,com.ar,rogfrig8
+ernestozimmerman2,hotmail,com,ernszim44
+aylucab27,gmail,com,aylrub9
+agus99,hotmail,com,lucky34
+paoladandre5,yahoo,com.ar,paotarcen2
+brenda1594,gmail,com,brecapa28
+eiraiden,yahoo,com.ar,shogun27
+tinchopaez82,hotmail,com,mart46
+edugun2022,gmail,com,eduital22
