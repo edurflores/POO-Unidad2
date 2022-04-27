@@ -9,10 +9,13 @@ class ManejadorEmails:
         self.__listaEmails.append(unEmail)
 
     def IndicaRepetido(self, idcuenta):
+        i = 0
         bandera = False
-        for i in range(len(self.__listaEmails)):
-            if self.__listaEmails[i].getIdCuenta() == idcuenta:
+        while i < len(self.__listaEmails) and bandera == False:
+            if self.__listaEmails[i].getIdCuenta() == idcuenta: ### Lo encontro
                 bandera = True
+            else:
+                i += 1
 
         if bandera:
             print('El id de cuenta ingresado esta repetido.')
@@ -20,18 +23,14 @@ class ManejadorEmails:
             print('El id de cuenta ingresado NO esta repetido.')
 
     def CargaEmails (self):
-        archivo = open('Emails.txt')
+        archivo = open('archivoEmails.csv')
         reader = csv.reader(archivo,delimiter=',')
         bandera = True
         for fila in reader:
             if bandera:
                 bandera = not bandera
             else:
-                id = fila[0]
-                dom = fila[1]
-                tdom = fila[2]
-                con = fila[3]
-                unEmail = Email(id,dom,tdom,con)
+                unEmail = Email(fila[0],fila[1],fila[2],fila[3])
                 self.AgregarEmail(unEmail)
         archivo.close()
         print('Se han cargado los emails del archivo.')

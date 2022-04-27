@@ -1,7 +1,23 @@
 from claseEmail import Email
 from claseManejadorEmails import ManejadorEmails
 
+def test():
+    print('Funcion test.')
+    print('Ingreso de un mail por partes.')
+    print('id de cuenta: "antoniolopez15", dominio: "hotmail", tipo de dominio: "com", contrasenha: "antolo77"')
+    mailtest = Email('antoniolopez15','hotmail','com','antolo77')
+    print('Mail creado: {}'.format(mailtest.retornaEmail()))
+    print('------------------------------------')
+    print('Ingreso de un mail completo.')
+    print('Mail ingresado: "lucreciamartinez88@gmail.com"')
+    mailtest2 = Email('','','','')
+    mailtest2.crearCuenta('lucreciamartinez88@gmail.com')
+    print('Mail creado: {}'.format(mailtest2.retornaEmail()))
+    print('------------------------------------')
+    print('-------FIN FUNCION TEST-------')
+
 if __name__ == '__main__':
+    test()
     ### Inciso 1
     nombre = input('Ingrese su nombre:')
     print('Ingrese su email por partes.')
