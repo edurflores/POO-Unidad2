@@ -2,6 +2,7 @@ from claseManejadorViajeros import ManejadorViajeros
 
 if __name__ == '__main__':
     mv = ManejadorViajeros()
+    mv.test()
     mv.cargaViajeros()
     print('Menu principal')
     print('1- Mostrar todos los viajeros.\n2- Ingresar a menu de viajero.\n0- Salir.')
