@@ -1,0 +1,61 @@
+Documentación de Ejercicio 8 de la Unidad 2 (Conjuntos).
+Alumno: Eduardo Rafael Flores.
+
+Unión
+
+La operacion de union tomará todo el primer conjunto como base.
+Entonces, se copia la lista mediante el método copy(). Debe hacerse de esta forma para evitar
+que dos variables hagan referencia al mismo bloque de memoria y la lista original se vea alterada
+si se modifica la nueva lista. Esto ocurre si se hace asignación nuevalista = listaoriginal.
+Por tanto, es preferible hacer, por ejemplo nuevalista = listaoriginal.copy()
+Luego recorrerá el segundo conjunto, comparando cada elemento con el primer conjunto.
+Si el elemento en cuestión ya se encuentra en el primer conjunto, no se lo agrega.
+Si resulta que NO se encuentra, se lo agrega mediante el método de lista append().
+El proceso se repetirá hasta haber comparado cada elemento.
+
+
+¿Qué pasa si en un mismo conjunto hay elementos repetidos?
+Ejemplo: A = {1,2,2,2}
+
+Teóricamente no debería ser posible. Puesto que no está permitido que un conjunto tenga elementos "repetidos".
+Si en un conjunto aparece un elemento repetido, en realidad es como si sólo apareciese una vez.
+
+De todas formas está implementado un algoritmo para tratar con conjuntos en los que el usuario
+repita elementos. Por ejemplo A = {1,2,2,2,5}.
+Mediante el metodo de lista count(), el programa contara la cantidad de veces que se encuentra
+cada elemento, esto se almacenará en una variable contador (cont).
+Si se encuentra más de una vez (cont > 1), se entrará a un bucle while donde en cada iteración,
+mediante el método de lista remove(), se eliminará dicho elemento, hasta que solo quede uno (cont == 1)
+
+Esta situación solo se comprobará en el primer conjunto.
+Esto debido a que en el segundo conjunto, dado el propio planteo del algoritmo,
+aunque se repitieran varias veces elementos, solo se agregaría uno al conjunto final.
+Por tanto, no hace falta hacer esta comprobación en el segundo conjunto.
+
+
+Diferencia
+
+Mediante un indice i, se recorrerá mediante un bucle for el primer conjunto.
+Dentro del cuerpo del bucle hay una estructura while con un indice j para recorrer el segundo conjunto.
+Se determina mediante un if si el elemento i del primer conjunto coincide con un elemento j del segundo conjunto.
+En caso de que se encuentre (bandera == True) no se lo agrega al conjunto final.
+En caso de que NO se encuentre (bandera == False) se lo agrega al conjunto final.
+Al salir del bucle for ya se tiene el resultado, el cual es retornado como un objeto de la clase Conjunto.
+
+Nota: Para esta situación no hay algoritmo para tratar con conjuntos de elementos repetidos.
+Puesto que se considera que el usuario no debería introducir uno de este tipo. Matemáticamete no sería lo correcto.
+
+
+Igualdad
+
+Ambos conjuntos serán ordenados mediante el método de lista sort()
+
+Luego se verificara si ambos conjuntos tienen el mismo tamaño (cantidad de elementos).
+Si falla (no tienen el mismo tamaño), se concluye en que no son iguales.
+
+Si tienen el mismo tamaño entonces se procederá a recorrer cada elemento comparando con el mismo
+elemento del otro conjunto.
+Si falla se concluye que los conjuntos no son iguales.
+Si no hay fallo, entonces los conjuntos son iguales.
+
+Se muestra a los dos conjuntos en pantalla para también poder apreciar visualmente si hay igualdad o no.
