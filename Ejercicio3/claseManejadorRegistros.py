@@ -153,7 +153,7 @@ class ManejadorRegistros:
 
     def muestraRegistroDia(self):
         numdia = int(input('Ingrese numero de dia:')) - 1
-        print('Hora | Temperatura (°C) | Humedad (%) | Presion (hPa)')
+        print('Hora \t\t\t Temperatura (°C) \t\t\t Humedad (%) \t\t\t Presion (hPa)')
         for i in range(24):
             print(' ',i,self.__listaRegistros[numdia][i])
-        print('-----------------------------------------------------------')
+        print('---------------------------------------------------------------------------------------')

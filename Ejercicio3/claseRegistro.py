@@ -12,7 +12,7 @@ class Registro:
             self.__presion = pres
 
     def __str__(self):
-        return '         ' + str(self.__temperatura) + '               ' + str(self.__humedad) + '            ' + str(self.__presion)
+        return '\t\t\t\t   ' + str(self.__temperatura) + '\t\t\t\t\t\t' + str(self.__humedad) + '\t\t\t\t\t\t ' + str(self.__presion)
 
     def getTemperatura(self):
         return self.__temperatura
